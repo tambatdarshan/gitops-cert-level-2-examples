@@ -7,7 +7,9 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
-
+  ignoreDifferences:
+    kind: Secret
+    kind: Deployment
   source:
     repoURL: https://github.com/codefresh-contrib/gitops-cert-level-2-examples.git
     targetRevision: HEAD
